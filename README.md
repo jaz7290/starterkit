@@ -1,7 +1,7 @@
 starterkit
 ==========
 
-to start run the following commands:
+to get started, run the following commands:
 
 npm update
 
