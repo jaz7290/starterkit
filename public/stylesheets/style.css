@@ -1,0 +1,42 @@
+body {
+	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+	line-height: 1.5;
+	color: #8D8D8D;
+}
+#info
+{
+	padding: 20px;
+	border-left: 1px solid #DDD;
+}
+.affix
+{
+	top:80;
+}
+.affix-top
+{
+	top:80px;
+}
+.affix-bottom
+{
+	top: 40px;
+}
+a {
+	color: #00B7FF;
+}
+input, button
+{
+	border-radius: 0 !important;
+}
+.marginTopBottom{
+	margin-top: 2% !important;
+	margin-bottom: 2% !important;
+}
+.one-edge-shadow {
+	-webkit-box-shadow: 0 8px 6px -6px #CCCBCB;
+	-moz-box-shadow: 0 8px 6px -6px #CCCBCB;
+	box-shadow: 0 8px 6px -6px #CCCBCB;
+	border-radius: 0 !important;
+	border:1px solid #DDD;
+	background: #EEE;
+}
+

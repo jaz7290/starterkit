@@ -1,0 +1,19 @@
+{
+  "name": "application-name",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "3.4.8",
+    "jade": "*",
+    "request": "~2.34.0",
+    "date-utils": "~1.2.15",
+    "flickrapi": "~0.3.13",
+    "solr-client": "~0.2.9",
+    "underscore": "~1.6.0",
+    "freebase": "git+https://github.com/spencermountain/Freebase.js.git",
+    "when": "~3.0.1"
+  }
+}

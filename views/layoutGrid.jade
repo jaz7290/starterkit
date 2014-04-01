@@ -1,0 +1,70 @@
+doctype html5
+html(lang='')
+  head
+    title Title Page
+    meta(charset='UTF-8')
+    meta(name='description', content='')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    //
+       Bootstrap CSS 
+    link(href='stylesheets/bootstrap.min.css', rel='stylesheet', media='screen')
+    link(href='stylesheets/styleGrid.css', rel='stylesheet', media='screen')
+    script(src='javascripts/jquery.min.js')
+    script(src='javascripts/bootstrap.min.js')
+    script(src='javascripts/angular/angular.min.js')
+  body
+    .wrap
+      nav.navbar.navbar-default.navbar-fixed-top(role='navigation')
+        //
+           Brand and toggle get grouped for better mobile display 
+        .navbar-header
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-ex1-collapse')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+        //
+           Collect the nav links, forms, and other content for toggling 
+        .collapse.navbar-collapse.navbar-ex1-collapse
+          form.navbar-form.navbar-left(role='search', action='/searchGrid', method='GET')
+            .form-group
+              if query == ""
+                input.form-control(type='text', name='q', size='40', placeholder='Enter Query Here')
+              else
+                input.form-control(type='text', name='q', size='40', placeholder='Enter Query Here', value='#{query}')
+            button.btn.btn-primary(type='submit')
+              span(style="padding:3px").glyphicon.glyphicon-search
+
+          if size
+            #resultsize(style="margin-top:20px; display:inline-block;")
+              span.label.label-success #{size} Hits
+          if size == 0
+            #resultsize(style="margin-top:20px; display:inline-block;")
+              span.label.label-danger #{size} Hits
+
+          ul.nav.navbar-nav.navbar-right
+            li.active
+              a(href='#') Browse
+            li
+              a(href='#') Overview
+            li.dropdown
+              a.dropdown-toggle(href='#', data-toggle='dropdown')
+                | Help
+                b.caret
+              ul.dropdown-menu
+                li
+                  a(href='#') Action
+                li
+                  a(href='#') Another action
+                li
+                  a(href='#') Something else here
+                li
+                  a(href='#') Separated link
+        //
+           /.navbar-collapse 
+    #mainBody.container(style="margin-top:80px;")
+      .row
+        if error != ""
+          p= error
+        block results

@@ -1,0 +1,63 @@
+extends layout
+
+mixin resultItem(result)
+  li.well-md.well-sm.well-lg
+    div
+      h3
+        a(href="", id="#{result.id}",ng-click='hello(#{result.id})') #{result.headline}
+      ul.list.list-unstyled.list-inline.marginTopBottom
+        li
+          span.label.label-primary #{result.credit}
+        li
+          span.label.label-warning #{result.publicationYear}
+      if result.articleAbstract
+        p.marginTopBottom #{result.articleAbstract.substr(0, 300)}....
+      else 
+        p.marginTopBottom #{result.body.substr(0, 300)}...
+        
+
+block results
+  ul.list-unstyled.list
+    each result, i in results
+      +resultItem(result)
+
+block analytics
+  script(src='javascripts/search.js')
+  #sidebar.well-sm(ng-show="article", ng-class="animate-show")
+    #info.affix(data-spy='affix', data-offset-top='768', data-offset-bottom='200')
+      h3(style="color:black") {{article.headline}}
+      span.label-success.label {{article.publicationDate}}
+      #articlebody(style="height:50%;overflow-y:auto;padding:10px")
+        p {{article.articleAbstract}}
+        p {{article.body}}
+      h3 Entities
+      ul#people.list.list-unstyled
+        li(ng-repeat="ppl in article.people")
+          {{ppl}}
+      ul#locations.list.list-unstyled
+        li(ng-repeat="loc in article.locations")
+          {{loc}}
+      ul#orgs.list.list-unstyled
+        li(ng-repeat="org in article.organisations")
+          {{org}}
+
+
+block timeline
+  if timelineObject
+    #timeline-embed(style="")
+      script(type='text/javascript', src='javascripts/TimelineJS/build/js/storyjs-embed.js')
+      script.
+        $(document).ready(function() {
+          console.log("hello");
+          var obj= !{timelineObject};
+          createStoryJS({
+            type:   'timeline',
+            width:    '100%',
+            height:   '90%',
+            source:   obj,
+            embed_id: 'timeline-embed',
+            debug:    true
+          });
+        });
+    
+      

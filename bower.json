@@ -1,0 +1,16 @@
+{
+  "name": "weatherApp",
+  "version": "0.0.0",
+  "authors": [
+    "jaspreet"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "requirejs": "~2.1.11",
+    "bootstrap": "~3.1.1",
+    "TimelineJS": "~2.30.0",
+    "angularjs": "*",
+    "angular": "~1.2.15"
+  }
+}

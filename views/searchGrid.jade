@@ -1,0 +1,23 @@
+extends layoutGrid
+
+mixin resultItem(result)
+  div.col-md-4.col-lg-4.result_article(style="height:200px;position:relative;")
+    .cover_photo.text-center.well-lg(style="")
+      ul.list.list-unstyled.list-inline(style="margin-top:25;")
+        li
+          span.text-muted #{result.credit}
+        li
+          span #{result.publicationYear}
+      h4(id="#{result.id}") #{result.headline}
+      h5.well-lg
+        span.label-primary.label #{result.newsDesk}
+    .article_content.well-lg(style="height:100%")
+      div(style="margin:15px 0;overflow:hidden;height:inherit")
+        a.marginTopBottom(href="#",style="color:black;") #{result.leadParagraph}
+      
+
+block results
+  .res.row
+    .col-lg-12.col-md-12
+      each result, i in results
+        +resultItem(result)
