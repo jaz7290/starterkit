@@ -1,7 +1,7 @@
 extends layoutGrid
 
 mixin resultItem(result)
-  div.col-md-4.col-lg-4.result_article(style="height:200px;position:relative;")
+  div.result_article(style="height: #{result.height} ;width:#{result.width}")
     .cover_photo.text-center.well-lg(style="")
       ul.list.list-unstyled.list-inline(style="margin-top:25;")
         li
@@ -14,10 +14,10 @@ mixin resultItem(result)
     .article_content.well-lg(style="height:100%")
       div(style="margin:15px 0;overflow:hidden;height:inherit")
         a.marginTopBottom(href="#",style="color:black;") #{result.leadParagraph}
-      
 
 block results
   .res.row
     .col-lg-12.col-md-12
-      each result, i in results
-        +resultItem(result)
+      div#serp
+        each result, i in results
+          +resultItem(result)

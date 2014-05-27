@@ -14,6 +14,7 @@
     "solr-client": "~0.2.9",
     "underscore": "~1.6.0",
     "freebase": "git+https://github.com/spencermountain/Freebase.js.git",
-    "when": "~3.0.1"
+    "when": "~3.0.1",
+    "freewall": "git+https://git@github.com/kombai/freewall.git"
   }
 }

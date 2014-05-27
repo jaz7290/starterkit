@@ -53,6 +53,14 @@ exports.searchQuery = function(req, res){
 	});
 };
 
+
+function computeHeight(res){
+	return 200  + (200 * Math.random() << 0);
+}
+function computeWidth(res){
+	return 200 + (300 * Math.random() << 0);
+}
+
 //{fl : 'body', pre: '<strong>', post: '</strong>', requireFieldMatch: true, usePhraseHighlighter: true}
 exports.searchQueryGrid = function(req, res){
 
@@ -79,6 +87,13 @@ exports.searchQueryGrid = function(req, res){
 	when.all(todo).done(function(value){
 		console.log("done");
 		var searchRes= value[0].search;
+		for(var i= 0; i<searchRes.results.length; i++){
+			var h = computeHeight(searchRes.results[i]);
+			var w = computeWidth(searchRes.results[i]);
+			searchRes.results[i].height = h;
+			searchRes.results[i].width = w;
+
+		}
 		res.render('searchGrid',{results: searchRes.results, query:query, error:"", size: searchRes.size});
 	});
 };

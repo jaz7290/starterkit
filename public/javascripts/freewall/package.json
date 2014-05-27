@@ -1,0 +1,34 @@
+{
+  "name": "freewall",
+  "version": "1.0.4",
+  "description": "Amazing grid layout.",
+  "author": {
+    "name": "Minh Nguyen"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/kombai/freewall/blob/master/license.md"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/kombai/freewall.git"
+  },
+  "main": "lib",
+  "homepage": "http://vnjs.net/www/project/freewall/",
+  "dependencies": {
+    "jQuery": "~1.7"
+  },
+  "readme": "# Freewall\n\n_Freewall is a cross-browser and responsive jQuery plugin to help you create many types of grid layouts: flexible layouts, images layouts, nested grid layouts, metro style layouts, pinterest like layouts ... with nice CSS3 animation effects and call back events. Freewall is all-in-one solution for creating dynamic grid layouts for desktop, mobile, and tablet..._\n##### [Buy me a beer :)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=SZSGB3GJ3T4VU)\n<br>\n### Document [http://vnjs.net/www/project/freewall/](http://vnjs.net/www/project/freewall/)\n##### Some example layouts\n<br>\n<img src='https://raw.github.com/kombai/freewall/master/i/flex.png'>\n##### [Flexible layout](http://vnjs.net/www/project/freewall/example/flex-grid.html)\n<br>\n<img src='https://raw.github.com/kombai/freewall/master/i/image.png'>\n##### [Images show](http://vnjs.net/www/project/freewall/example/image-layout.html)\n<br>\n<img src='https://raw.github.com/kombai/freewall/master/i/pinterest.png'>\n##### [Pinterest-like](http://vnjs.net/www/project/freewall/example/pinterest-layout.html)\n<br>\n<img src='https://raw.github.com/kombai/freewall/master/i/metro.png'>\n##### [Window 8 style](http://vnjs.net/www/project/freewall/example/metro-style.html)\n\n## Features\n* [Draggable support](http://vnjs.net/www/project/freewall/example/draggable.html)\n* [Direction support](http://vnjs.net/www/project/freewall/example/direction.html)\n* [Custom Plugin](http://vnjs.net/www/project/freewall/example/centering-grid.html)\n* [Responsive grid](http://vnjs.net/www/project/freewall/)\n* [Gaps control](http://vnjs.net/www/project/freewall/404.html)\n* [Filter items](http://vnjs.net/www/project/freewall/example/demo-filter.html)\n* [CSS3 animation (js fallback)](http://vnjs.net/www/project/freewall/example/css-animate.html)\n* [Nested grid](http://vnjs.net/www/project/freewall/example/nested-grid.html)\n* [Images grid/layout](http://vnjs.net/www/project/freewall/example/image-layout.html)\n* [Fit container](http://vnjs.net/www/project/freewall/example/fit-zone.html)\n* [Vertical grid/layout](http://vnjs.net/www/project/freewall/)\n* [Horizontal grid/layout](http://vnjs.net/www/project/freewall/example/fit-height.html)\n* [Window 8 metro style](http://vnjs.net/www/project/freewall/example/metro-style.html)\n* [Pinterest like grid/layout](http://vnjs.net/www/project/freewall/example/pinterest-layout.html)\n\n## Supports\nFreewall supports almost browser\n* Chrome \n* Opera\n* Safari\n* IE 8.0+\n* Firefox\n\n## License\nReleased under the MIT license\n",
+  "readmeFilename": "readme.md",
+  "bugs": {
+    "url": "https://github.com/kombai/freewall/issues"
+  },
+  "_id": "freewall@1.0.4",
+  "dist": {
+    "shasum": "4c9955440b2ae5bf50bc29ebf4c5ee5fcdc2ec18"
+  },
+  "_resolved": "git+https://git@github.com/kombai/freewall.git#24ac21915ace6e9a3efc17a8e2ae233affb21451",
+  "_from": "git+https://git@github.com/kombai/freewall.git"
+}

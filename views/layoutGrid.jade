@@ -13,6 +13,7 @@ html(lang='')
     script(src='javascripts/jquery.min.js')
     script(src='javascripts/bootstrap.min.js')
     script(src='javascripts/angular/angular.min.js')
+    script(src='javascripts/freewall/freewall.js')
   body
     .wrap
       nav.navbar.navbar-default.navbar-fixed-top(role='navigation')
@@ -63,8 +64,9 @@ html(lang='')
                   a(href='#') Separated link
         //
            /.navbar-collapse 
-    #mainBody.container(style="margin-top:80px;")
+    .container(style="margin-top:80px;")
       .row
         if error != ""
           p= error
         block results
+    script(src='javascripts/grid.js')
